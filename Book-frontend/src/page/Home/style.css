@@ -1,0 +1,66 @@
+.box-menu {
+  background-color: white;
+  border-radius: 10px;
+
+  position: relative;
+  min-width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.menu-item {
+  border-radius: 10px;
+  font-weight: 500;
+  line-height: 2.1rem;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10px;
+}
+.menu-item:hover {
+  background-color: gainsboro;
+  color: red;
+}
+.menu {
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 200px;
+  z-index: 2;
+  background-color: white;
+  width: calc(100% - 224px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
+.list-menu {
+  margin-top: 20px;
+}
+.slide {
+  width: 50%;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: rgb(51, 47, 117);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box-right {
+  width: 100%;
+  background-color: aqua;
+}

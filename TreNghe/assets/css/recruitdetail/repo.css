@@ -1,0 +1,26 @@
+@media (min-width: 740px) and (max-width: 1023px) {
+  #container,
+  #box-map {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 740px) {
+  #container,
+  #box-map {
+    padding: 20px 10px;
+    margin: 0;
+  }
+
+  #box-map {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .list-mota {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+  #map {
+    width: 100%;
+  }
+}

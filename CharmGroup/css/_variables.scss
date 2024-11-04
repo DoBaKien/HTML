@@ -1,0 +1,125 @@
+$maincolor: rgb(6, 33, 86);
+$secondColor: #fba81a;
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200..700&display=swap");
+
+@mixin media-query($num: 720px) {
+  @media (max-width: $num) {
+    @content;
+  }
+}
+@mixin media-query2($num: 720px) {
+  @media (min-width: $num) {
+    @content;
+  }
+}
+
+@mixin paddingBody($num: 720px) {
+  padding: 50px 100px;
+  @include media-query($num) {
+    padding: 20px;
+  }
+}
+
+@mixin title() {
+  color: $secondColor;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4rem;
+  @include media-query() {
+    font-size: 1.8rem;
+  }
+}
+
+@mixin textTitle() {
+  font-size: 1.5rem;
+  color: $maincolor;
+  font-weight: 600;
+  line-height: 1.3;
+  @include media-query() {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+@mixin borderTab($local) {
+  content: "";
+  width: 2px;
+  height: 180px;
+  background-color: black;
+  left: 48px;
+  position: absolute;
+  @if ($local== "top") {
+    top: -10px;
+  } @else {
+    bottom: 0;
+  }
+}
+
+@mixin lines() {
+  width: 2px;
+  height: 30px;
+  background-color: black;
+}
+@mixin menuBoth() {
+  position: absolute;
+  min-width: 80px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+@mixin btnHovertopbot($width: 50%) {
+  border: 1px solid $secondColor;
+  margin: 20px auto;
+  text-transform: uppercase;
+  width: $width;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  height: 50px;
+  background-color: white;
+  min-width: 200px;
+  position: relative;
+  p {
+    font-size: 1.1rem;
+    margin-block: 0;
+    z-index: 3;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  &:hover {
+    letter-spacing: 3px;
+    color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    &::after {
+      height: 25px;
+      background-color: $maincolor;
+    }
+    &::before {
+      height: 25px;
+      background-color: $maincolor;
+    }
+  }
+}

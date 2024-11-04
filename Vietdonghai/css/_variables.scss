@@ -1,0 +1,133 @@
+$main-color: #0f135a;
+$text-color: #6b6b6b;
+$back-color: #f4f5f6;
+$border-radius-item: 30px;
+$back-image: url(data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMcaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA2LjAtYzAwNiA3OS4xNjQ2NDgsIDIwMjEvMDEvMTItMTU6NTI6MjkgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY3MDA3QzUxQkIzRjExRUM4QzEwREE5MkVFMEFGQ0Q3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY3MDA3QzUwQkIzRjExRUM4QzEwREE5MkVFMEFGQ0Q3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMDIxIE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJCNDUxRUExRkIyOURERkVGOEVGMEE2MzVDQTFGMzczRCIgc3RSZWY6ZG9jdW1lbnRJRD0iQjQ1MUVBMUZCMjlEREZFRjhFRjBBNjM1Q0ExRjM3M0QiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAGBAQEBQQGBQUGCQYFBgkLCAYGCAsMCgoLCgoMEAwMDAwMDBAMDg8QDw4MExMUFBMTHBsbGxwfHx8fHx8fHx8fAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAemABUDAREAAhEBAxEB/8QAVgABAQEBAAAAAAAAAAAAAAAAAAECCAEBAQEAAAAAAAAAAAAAAAAAAAECEAEBAQEBAQEAAAAAAAAAAAAAEYFhAUExEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A6cVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE0FBNAAAAAAAAABKBQKBQKBQRYBAIKAAACUFBKBQKCAAAAAAAAAUCgUEAAAAAAAAAoFAoJVACgAAAAAAgKCAUCgUEAAAAAAAAA0CgaCNAAAIAAAAAlAoFBAWggAAAAAAFAoFBKBQKAAAAqAAAAAFAoFBAAAAAAAAASgUCggAAAAAAAAAFABKBQKAoAAAAAUCgUEoFAoAAAAAAAAAJoKCaCAAAAAAAAAUCgUCgUCgigAAAAABQAAKCUAAAAAACiAAM0QoFAAAAAAAUAAKBQKCUACgAAAAAAgKCAUCgUEAAAAABVAAE0FBNBAAAAAAAAAPoFA+ggFAAAAAAAAAoFBKsC+qFSCKAAAAAAAAFAoFBAAABAAAAACgUCglAAoAAAAAAF8AvgF8BKBQKAAAAAACUCgUCgUCggKCAAAAAAAaBQNBAAAAAAFgEAgVUKBQAIAAyoAAAAABAAUAAAAAAAAAAAGgAAAAAAAAAAAUAAAAAAAAAAAAAAFAgAAAAAoAAAACgcAAAAAAAAAABYlFKJCioAAAAAAAAAEABQAAAAAAAAAAAaAAAAABEAAAAAGgAAAAAAAAAAAAAAUCAAFAoFBAAAAABQTgKCigAAoAAAACwACAAAAAAAAAAIAAKAAAAAAAAAAAC/gKCQFAAAAAAAABQAAAAAAAAAAAEFBAUCAAAAAAAAoEABQTgKAAAAAAAAACgcAAAAAQAABQAAAAFAAAAAAAAABYCA0AAAAAAAAAigAKgAAAACAoAAAAADQMg0AAAAAAAAAAACoAAAAAAAAAAAKBwAAAAAAAAAAGgAAAAAAAAQAABBYCA0AAAAAAAAAAACgAAAAA/9k=)
+  repeat-x left center/auto 100%;
+
+@mixin media-query($num: 720px) {
+  @media (max-width: $num) {
+    @content;
+  }
+}
+@mixin media-query2($num: 720px) {
+  @media (min-width: $num) {
+    @content;
+  }
+}
+@mixin paddingBody() {
+  padding: 50px 100px;
+  @include media-query() {
+    padding: 20px;
+  }
+}
+
+@mixin dotItem($location) {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  @if ($location == "top") {
+    top: -5px;
+    left: -5px;
+  } @else {
+    bottom: -5px;
+    left: -5px;
+  }
+}
+
+@mixin titleText() {
+  font-size: 35px;
+  font-weight: 600;
+  color: $main-color;
+  @include media-query() {
+    font-size: 22px;
+  }
+}
+
+@mixin lineColor($position) {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: $main-color;
+  position: absolute;
+
+  @if ($position == "left") {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    height: 3px;
+  } @else if($position == "right") {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    height: 3px;
+  } @else if($position == "top") {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  } @else if($position == "bot") {
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+
+@mixin animationEffect() {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: $main-color;
+  right: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  justify-content: center;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    background-color: $main-color;
+    height: 80px;
+    width: 80px;
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: mq 2s infinite;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    background-color: $main-color;
+    height: 80px;
+    width: 80px;
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: mq 2s infinite;
+    animation-delay: 1s;
+  }
+  .icon-left {
+    z-index: 2;
+    color: white;
+    font-size: 25px;
+  }
+  @keyframes mq {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+}

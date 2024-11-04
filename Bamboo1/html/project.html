@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <section>
+        <div class="title">Dự án</div>
+        <div class="subtitle">Trang chủ | <b>Dự án</b></div>
+    </section>
+
+    <div class="tab-menu">
+        <div class="tab">
+            <button class="btn" id="Duan">Dự án</button>
+            <button class="btn active" id="Bamboo">Bamboo Nursery's map</button>
+        </div>
+        <div class="find">
+            <input placeholder="Tìm kiếm" type="text">
+        </div>
+    </div>
+    <div id="DuanContent" class="tabcontent">
+        <div class="box1">
+            <div class="title">Dự án nổi bật</div>
+            <div class="list" id="list">
+
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box-page">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link active" href="#" data-page="1">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="4">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="5">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link1" id="btn-next" href="#" data-page="next">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link11" href="#">
+                            <i class="ri-arrow-right-double-line"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="BambooContent" class="tabcontent">
+        <div class="filter">
+            <label for="cars">Lọc bởi</label>
+            <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>
+        <div class="box1">
+            <div class="col1">
+                <div class="col1-header">
+                    <div> <i class="ri-zoom-in-line"></i></div>
+                    <div class="icon2">
+                        <i class="ri-arrow-left-line"></i>
+                        <i class="ri-close-line" style="margin-left: 8px;"></i>
+                    </div>
+                </div>
+                <img src="../assets/img/Maskgroup.png" alt="">
+                <div class="disc">
+                    <div class="title">Trang trại trồng rừng</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore</p>
+                    <div class="text"><i class="ri-map-pin-line"></i>
+                        <p>
+                            2c8 Trường Sa, Phường 19, Bình Thạnh, Thành phố Hồ Chí Minh
+                            72323
+                        </p>
+                    </div>
+                    <div class="text"><i class="ri-phone-line"></i>
+                        <p>
+                            123456789
+                        </p>
+                    </div>
+                    <div class="text"><i class="ri-drag-move-2-line"></i>
+                        <p>
+                            QP05+8G Bình Thạnh, Thành phố Hồ Chí Minh
+                        </p>
+                    </div>
+                    <div class="text"><i class="ri-send-plane-fill"></i>
+                        <p>
+                            Gửi tới điện thoại của bạn
+                        </p>
+                    </div>
+                    <button class="btn">Mở trong bản đồ google</button>
+                </div>
+            </div>
+            <div class="col2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8400680346513!2d106.76880397508933!3d10.8235484893281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317526ff5277cf4f%3A0x9e994b049458b6f!2zUGjGsOG7m2MgTG9uZyBCLCBRdeG6rW4gOSwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1721356734393!5m2!1svi!2s"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="footer-container"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/project.js"></script>
+</body>
+
+</html>

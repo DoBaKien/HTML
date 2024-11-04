@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <section>
+        <div class="title">Sản phẩm & Dịch vụ</div>
+        <div class="subtitle">Trang chủ | <b>Sản phẩm & Dịch vụ</b></div>
+    </section>
+
+    <div id="page-product">
+        <div class="box1">
+            <div class="title">Giải pháp toàn diện</div>
+            <div class="list">
+                <div class="item">
+                    <img src="../assets/img/checklist1.png" alt="">
+                    <div class="title1">Bước 1</div>
+                    <div class="title2">Khảo sát</div>
+                </div>
+                <div class="item">
+                    <img src="../assets/img/checklist1.png" alt="">
+                    <div class="title1">Bước 2</div>
+                    <div class="title2">Khảo sát</div>
+                </div>
+                <div class="item">
+                    <img src="../assets/img/checklist1.png" alt="">
+                    <div class="title1">Bước 3</div>
+                    <div class="title2">Khảo sát</div>
+                </div>
+                <div class="item">
+                    <img src="../assets/img/checklist1.png" alt="">
+                    <div class="title1">Bước 4</div>
+                    <div class="title2">Khảo sát</div>
+                </div>
+                <div class="item">
+                    <img src="../assets/img/checklist1.png" alt="">
+                    <div class="title1">Bước 5</div>
+                    <div class="title2">Khảo sát</div>
+                </div>
+                <div class="item">
+                    <img src="../assets/img/checklist1.png" alt="">
+                    <div class="title1">Bước 6</div>
+                    <div class="title2">Khảo sát</div>
+                </div>
+                <div class="item">
+                    <img src="../assets/img/checklist1.png" alt="">
+                    <div class="title1">Bước 7</div>
+                    <div class="title2">Khảo sát</div>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="col1">
+                <div class="title">Tre - Cây trồng chủ lực</div>
+                <div class="disc">Bamboo Nursery với hớn 30 loại giống Tre  chủ lực, với nhiều giá trị khai
+                    thác khác nhau và tiềm năng phát triển mạnh mẽ tại các thị trường trong và ngoài
+                    nước. Sản phẩm giống Tre đạt chất lượng theo tiêu chuẩn Quốc gia đối với giống cây
+                    trồng lâm nghiệp ngoài gỗ.</div>
+                <button class="btn">Lien he ngay</button>
+            </div>
+            <div class="col2">
+                <img src="../assets/img/Mask1.png" alt="">
+            </div>
+        </div>
+        <div class="box3">
+            <div class="carousel" id="list">
+            </div>
+        </div>
+        <div class="box4">
+            <div class="box41">
+                <div class="col1">
+                    <img src="../assets/img/Mask1.png" alt="">
+                </div>
+                <div class="col2">
+                    <div class="box-text">
+                        <div class="title">Sản phẩm khác</div>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                            quod
+                            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut
+                            et
+                            voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a
+                            sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+                            doloribus asperiores repellat. On the other hand, we denounce with righteous indignation and
+                            dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so
+                            blinded by desire</p>
+                        <button class="btn">Liên hệ ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box42">
+                <div class="carousel-4" id="list1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-container"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script>
+        function list1(a) {
+            const container = document.getElementById(a);
+            for (let i = 1; i < 7; i++) {
+                const box = document.createElement("div");
+                box.innerHTML = `<div class="carousel-cell">
+                    <div class="row-text">
+                        <div class="row-img">
+                            <img src="../assets/img/pngegg1.png" alt="">
+                        </div>
+                        <div class="title">Tre gai</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi</p>
+                    </div>
+                </div>`;
+
+                container.appendChild(box);
+            }
+        }
+        list1("list")
+        list1("list1")
+        var $carousel = $(".carousel-4").flickity({
+            wrapAround: true,
+            contain: true,
+            pageDots: false,
+            groupCell: 3
+
+        });
+        var $carousel = $(".carousel").flickity({
+            wrapAround: true,
+            contain: true,
+            pageDots: false,
+            groupCell: 3
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+.contact-page {
+  @include layoutColumn;
+  padding: 100px;
+  gap: 50px;
+  .col1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .box-logo {
+      display: flex;
+      gap: 20px;
+      img {
+        width: 100px;
+        height: 120px;
+      }
+      .text {
+        width: 100%;
+        .name {
+          font-size: 50px;
+          font-weight: 700;
+        }
+        .name1 {
+          font-size: 40px;
+          letter-spacing: 8px;
+        }
+      }
+    }
+  }
+  .col2 {
+    width: 100%;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .btn {
+        @include btn("color");
+        border-radius: 0;
+      }
+    }
+  }
+}

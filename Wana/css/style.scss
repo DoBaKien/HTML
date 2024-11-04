@@ -1,0 +1,486 @@
+@import "./variables";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.cam {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 140, 0) 100%
+  );
+
+  img {
+    position: absolute;
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+    will-change: transform;
+    // object-fit: scale-down;
+  }
+  #cam-1 {
+    left: 50%;
+    top: 50%;
+    height: 50%;
+    width: 40%;
+    z-index: 2;
+    transform: translate3d(-50%, -50%, 100px);
+    object-fit: scale-down;
+    @include media-query() {
+      width: 70%;
+    }
+  }
+  #box-back {
+    // background-color: rgb(255, 255, 255, 0.2);
+    z-index: 1;
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 200px);
+    @include media-query() {
+      width: 120%;
+    }
+  }
+  #cam-2 {
+    width: 25%;
+    top: 50%;
+    right: 8%;
+    transform: translate3d(0, -50%, -100px);
+  }
+  #cam-3 {
+    left: 50%;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate3d(-50%, -50%, -50px);
+    height: 90%;
+    z-index: -1;
+  }
+  #cam-4 {
+    left: 25%;
+    top: 35%;
+    width: 25%;
+    transform: translate3d(-50%, -50%, -100px) rotate(210deg);
+  }
+
+  #box-cam {
+    perspective: 1000px;
+    position: absolute;
+    transition: transform 0.1s ease-out;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 100px);
+    width: 10%;
+    height: 45%;
+    min-width: 60px;
+    transform-style: preserve-3d;
+    z-index: 6;
+
+    @include media-query() {
+      height: 250px;
+      width: 20%;
+    }
+    #cam-cut-1 {
+      width: 100%;
+      min-width: 100px;
+      top: 0;
+      left: 120%;
+      transform: translate3d(-50%, -50%, 50px);
+      z-index: 4;
+    }
+  }
+  #box-cam-2 {
+    @extend #box-cam;
+
+    #cam-cut-2 {
+      width: 100%;
+      bottom: -5%;
+      min-width: 100px;
+      left: -70%;
+      transform: translate3d(0, 0, 50px);
+      z-index: 4;
+    }
+  }
+  #box-chai {
+    @extend #box-cam;
+    z-index: 4;
+    #chai-cam {
+      width: 100%;
+      height: 100%;
+      z-index: 4;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 50px);
+    }
+  }
+
+  .text {
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 250px;
+    font-size: 3rem;
+    font-weight: 600;
+    z-index: 6;
+    // width: 800px;
+    text-align: center;
+    color: rgb(255, 255, 255, 0.8);
+    left: 50%;
+    transition: transform 0.1s ease-out;
+    bottom: 25%;
+    transform: translate3d(-50%, -50%, 500px);
+    transform-style: preserve-3d;
+    @include media-query(1000px) {
+      font-size: 20px;
+      // width: 100%;
+    }
+  }
+  #click {
+    width: 5%;
+    left: 80%;
+    bottom: 15%;
+    transform: translate3d(-50%, -50%, 100px);
+    z-index: 6;
+  }
+}
+.dua {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  perspective: 1000px;
+  background-image: radial-gradient(
+    at left top,
+    rgb(117, 255, 115) 0%,
+    rgb(255, 250, 250) 40%,
+    rgb(255, 255, 255) 69%,
+    rgb(255, 91, 79) 100%
+  );
+  img {
+    position: absolute;
+    transition: transform 0.1s ease-out, margin-top 0.1s ease-out;
+    transform-style: preserve-3d;
+    will-change: transform;
+    width: 10%;
+    object-fit: scale-down;
+  }
+  .box-container {
+    width: 50%;
+    position: relative;
+    height: 100%;
+    top: 50%;
+    min-width: 700px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include media-query() {
+      height: 80%;
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+  #box-dau {
+    perspective: 1000px;
+    position: relative;
+    transition: transform 0.1s ease-out;
+    top: 50%;
+    left: 45%;
+    transform: translate3d(-50%, -50%, 100px);
+    width: 25%;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: 2;
+    #chai-dau {
+      width: 100%;
+      top: 40%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 50px) rotate(10deg);
+      z-index: 4;
+    }
+  }
+  #coconut-1 {
+    width: 35%;
+    top: 80%;
+    left: 45%;
+    transform: translate3d(-50%, -50%, 100px);
+    z-index: 3;
+  }
+  #coconut-2 {
+    width: 20%;
+    top: 53%;
+    left: 25%;
+    transform: translate3d(-50%, -50%, 100px) rotate(-40deg);
+    z-index: 1;
+  }
+  #back {
+    width: 60%;
+    top: 50%;
+    left: 34%;
+    transform: translate3d(-50%, -50%, 100px) rotate(-40deg);
+    z-index: -1;
+    filter: blur(0px) brightness(100%) contrast(100%) grayscale(0%)
+      hue-rotate(310deg) invert(0%) saturate(100%) sepia(0%);
+  }
+  #dau-1 {
+    width: 20%;
+    top: 70%;
+    left: 75%;
+    transform: translate3d(-50%, -50%, -200px);
+    z-index: 4;
+  }
+  #dau-2 {
+    width: 18%;
+    top: 60%;
+    left: 64%;
+    transform: translate3d(-50%, -50%, -300px);
+    z-index: 3;
+  }
+  #dau-3 {
+    top: 50%;
+    left: 72%;
+    transform: translate3d(-50%, -50%, -200px);
+    z-index: 2;
+  }
+  #dau-4 {
+    width: 10%;
+    top: 55%;
+    left: 80%;
+    transform: translate3d(-50%, -50%, -50px);
+    z-index: 2;
+  }
+  #dau-5 {
+    width: 10%;
+    top: 30%;
+    left: 85%;
+    transform: translate3d(-50%, -50%, 100px);
+    z-index: -1;
+  }
+  #dau-7 {
+    width: 6%;
+    top: 15%;
+    left: 75%;
+    transform: translate3d(-50%, -50%, -100px);
+    z-index: 2;
+  }
+  #dau-6 {
+    width: 8%;
+    top: 20%;
+    left: 65%;
+    transform: translate3d(-50%, -50%, -100px);
+    z-index: 2;
+  }
+  #water {
+    width: 30%;
+    top: 52%;
+    left: 70%;
+
+    transform: translate3d(-50%, -50%, -100px);
+    z-index: 1;
+  }
+  #strl-1 {
+    width: 30%;
+    top: 50%;
+    left: 70%;
+    transform: translate3d(-50%, -50%, 100px);
+    z-index: 1;
+  }
+  #strl-2 {
+    width: 6%;
+    top: 75%;
+    left: 85%;
+    transform: translate3d(-50%, -50%, -100px);
+    z-index: 1;
+  }
+  #strl-3 {
+    width: 8%;
+    top: 75%;
+    left: 62%;
+    transform: translate3d(-50%, -50%, -100px);
+    z-index: 1;
+  }
+  .box-text {
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    z-index: 6;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    height: 200px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    transform: translate3d(-50%, -50%, 200px) rotate(-20deg);
+    text-align: right;
+    .text {
+      text-transform: uppercase;
+      bottom: 250px;
+      font-size: 4rem;
+      font-weight: bolder;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-weight: 700;
+      z-index: 6;
+
+      color: rgba(36, 51, 35, 0.8);
+
+      transition: transform 0.1s ease-out;
+
+      @include media-query(1000px) {
+        font-size: 40px;
+      }
+    }
+    .text1 {
+      @extend .text;
+
+      font-size: 3rem;
+      @include media-query(1000px) {
+        font-size: 30px;
+      }
+      color: brown;
+    }
+    #click {
+      position: absolute;
+      width: 20%;
+      bottom: 5%;
+      left: 100%;
+      transform: translate3d(-50%, -50%, 200px) rotate(40deg);
+    }
+  }
+}
+.chanh {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+  background-image: radial-gradient(
+    at left top,
+    rgb(186, 205, 21) 0%,
+    rgb(24, 143, 56) 46%,
+    rgb(24, 143, 56) 54%,
+    rgb(223, 235, 0) 100%
+  );
+  img {
+    position: absolute;
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+    will-change: transform;
+    object-fit: scale-down;
+  }
+
+  .box-container {
+    width: 50%;
+    position: relative;
+    height: 100%;
+    top: 50%;
+    min-width: 700px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include media-query() {
+      height: 80%;
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+  #back-chanh {
+    filter: hue-rotate(30deg);
+    height: 80%;
+    top: 50%;
+    left: 60%;
+    transform: translate3d(-50%, -50%, 600px);
+    @include media-query() {
+      height: 100%;
+    }
+  }
+  #box-chanh {
+    perspective: 1000px;
+    position: absolute;
+    transition: transform 0.1s ease-out;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 100px);
+    width: 40%;
+    height: 60%;
+    min-width: 60px;
+    transform-style: preserve-3d;
+    z-index: 6;
+    #chai-chanh {
+      width: 100%;
+      height: 100%;
+      z-index: 6;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 50px) rotate(-15deg);
+    }
+  }
+  #chanh-1 {
+    width: 25%;
+    top: 30%;
+    left: 20%;
+    transform: translate3d(-50%, -50%, 100px);
+    z-index: 3;
+  }
+  #chanh-2 {
+    width: 25%;
+    top: 70%;
+    left: 80%;
+    z-index: 2;
+    transform: translate3d(-50%, -50%, 100px) rotate(25deg);
+  }
+  #chanh-3 {
+    width: 20%;
+    top: 40%;
+    left: 70%;
+    transform: translate3d(-50%, -50%, 100px);
+    z-index: 7;
+  }
+  #chanh-la {
+    width: 20%;
+    top: 45%;
+    left: 80%;
+    transform: translate3d(-50%, -50%, 100px);
+    z-index: 7;
+  }
+  #chanh-xoay {
+    perspective: 1000px;
+    position: absolute;
+    transition: transform 0.1s ease-out;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 100px);
+    width: 20%;
+    height: 60%;
+    min-width: 60px;
+    transform-style: preserve-3d;
+    z-index: 4;
+    #chanh-4 {
+      width: 100%;
+      top: 0;
+      left: 100%;
+      transform: translate3d(-50%, -50%, 50px);
+      z-index: 4;
+    }
+  }
+  #water-1 {
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate3d(-50%, -50%, -200px);
+  }
+  #water-2 {
+    width: 70%;
+    top: 65%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, -50%, -200px);
+  }
+}

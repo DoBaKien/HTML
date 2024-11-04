@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="finish_body">
+        <div class="header">
+            <div class="back-btn">
+                <i class="ri-arrow-left-s-line" id="goBackButton"></i>
+            </div>
+            <div class="record" id="record">
+            </div>
+        </div>
+        <div class="box_body">
+            <div class="box-content">
+                <p class="title">Congratulations!</p>
+                <p>The test has been completed</p>
+                <div class="box-info">
+                    <p>Name: 123123</p>
+                    <p>Passport Number: 123123</p>
+                </div>
+                <div class="box-score">
+                    <div class="box-top">
+                        <p>Proficiency Level</p>
+                        <p> HSK1 - Fail</p>
+                    </div>
+                    <div class="box-bottom">
+                        <div class="col-left">
+                            <p>Time</p>
+                            <p>7 minutes and 4 seconds</p>
+                        </div>
+                        <div class="col-right">
+                            <p>Level Code</p>
+                            <p>0</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="goback" id="btnHome">Trở về</button>
+                <p class="btn-view">View test score</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="data.js"></script>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const hskName = urlParams.get("hsk");
+    const textRecord = document.getElementById("record");
+    const currentHSK = quiz.find((q) => q.name === hskName);
+    console.log(currentHSK);
+    textRecord.textContent = currentHSK.name;
+
+    document.getElementById("goBackButton").onclick = function () {
+        history.back();
+    };
+
+    document.getElementById("btnHome").onclick = function () {
+        window.location.href = `index.html`;
+    };
+
+</script>
+
+</html>

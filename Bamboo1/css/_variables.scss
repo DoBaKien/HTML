@@ -1,0 +1,98 @@
+$main-color: rgb(81, 148, 70);
+$padding-body: 30px 100px;
+$background-trans: rgb(81, 148, 70, 0.8);
+$color1: #e8e8e4;
+@mixin paddingBody() {
+  padding: 20px 100px;
+  @include media-query() {
+    padding: 30px;
+  }
+}
+@mixin layoutColumn() {
+  padding: 20px 100px;
+  display: flex;
+  @include media-query() {
+    padding: 30px;
+    flex-direction: column;
+  }
+}
+@mixin icon-header($color: black) {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 35px;
+  background-color: transparent;
+  color: $color;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: lightgray;
+    color: #444;
+  }
+}
+@mixin media-query() {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+@mixin media-query2() {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin btn($color: "none") {
+  margin-top: 30px;
+  padding: 10px 26px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  width: 150px;
+  @if ($color== "none") {
+    background-color: transparent;
+    border: 1px solid white;
+  } @else if($color== "color") {
+    background-color: $main-color;
+    border: 1px solid $main-color;
+  }
+}
+
+@mixin title-all($color: "black") {
+  font-size: 50px;
+  font-weight: 700;
+  color: $color;
+}
+
+@mixin item-list() {
+  width: 400px;
+  height: 400px;
+  margin-right: 50px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  padding-top: 200px;
+  text-align: center;
+  .row-text {
+    .row-img {
+      width: 100%;
+      position: absolute;
+      top: -30px;
+      height: 400px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    background-image: linear-gradient(to bottom, rgb(81, 148, 70, 0.6), white);
+    padding-top: 150px;
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+  }
+}

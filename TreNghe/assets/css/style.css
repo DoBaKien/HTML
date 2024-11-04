@@ -1,0 +1,396 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#html {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+#slider {
+  /* margin-top: 86px; */
+  padding-top: 40%;
+  background: url("../img//0106_hinh-nen-4k-may-tinh5.jpg") top center / cover
+    no-repeat;
+}
+
+#content {
+  padding: 30px 200px 0 200px;
+  background-color: #20261e;
+  color: white;
+}
+#construct {
+  text-align: center;
+}
+#content span {
+  font-size: 20px;
+}
+#content #cons {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#box-cons {
+  background: linear-gradient(
+    to bottom,
+    rgba(104, 154, 75, 1),
+    rgba(104, 154, 75, 0)
+  );
+  width: 45%;
+  min-height: 600px;
+  overflow: hidden;
+  min-width: 300px;
+}
+#box-cons img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  display: block;
+}
+#box-cons .title-cons {
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+}
+#box-cons .text-cons {
+  padding: 0 15px;
+  color: white;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#project,
+#customer {
+  padding-top: 50px;
+}
+
+#project #header-pro,
+#customer #header-customer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#project #title,
+#customer #title {
+  width: 300px;
+  font-size: 29px;
+}
+#project #text,
+#customer #text {
+  width: 500px;
+}
+#body-pro a {
+  font-size: 15px;
+  color: white;
+}
+.title-f {
+  margin-top: 10px;
+}
+.icon-th {
+  font-size: 9px;
+  transition: transform 0.3s;
+  color: white;
+}
+
+.box-icon {
+  height: 30px;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
+}
+.box-icon-2 {
+  height: 30px;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.box-th {
+  width: 70px;
+}
+.box-th-2 {
+  width: 100%;
+}
+.bor-th {
+  border: 1px solid white;
+  transition: all 1s ease;
+}
+.bor-th-2 {
+  border: 1px solid white;
+  width: 70px;
+  transition: transform 0.3s;
+  margin: 0 auto;
+}
+#box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item-box {
+  width: 360px;
+  height: 200px;
+  display: inline-block;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.item-box img {
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#other {
+  margin-top: 50px;
+  text-align: center;
+}
+#other #text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#other span {
+  width: 700px;
+}
+#other-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.mask1 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+#TN:hover .mask1 img {
+  transform: scale(1.1);
+}
+.mask1 {
+  position: relative;
+  width: 250px;
+  height: 360px;
+  -webkit-mask-image: url("../img/shape1.png");
+  mask-image: url("../img/shape1.png");
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.blurred-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(
+    to top,
+    rgba(104, 154, 75, 1),
+    rgba(104, 154, 75, 0)
+  );
+  pointer-events: none;
+}
+#TN:hover .blurred-bottom {
+  background: linear-gradient(
+    to top,
+    rgb(255, 255, 255),
+    rgba(104, 154, 75, 0)
+  );
+}
+.box-f {
+  cursor: pointer;
+}
+#box-text {
+  padding: 30px 0;
+  background-color: #689a4b;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+.link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.box-icon-2 .icon-th {
+  color: white;
+  transition: transform 0.3s;
+}
+#TN:hover #box-text {
+  background-color: white;
+  color: black;
+}
+#TN:hover .link {
+  color: black;
+}
+#TN:hover .box-icon-2 .icon-th {
+  color: black;
+  transform: translateY(-10px);
+}
+#TN:hover .box-th-2 .bor-th-2 {
+  border: 1px solid rgba(104, 154, 75, 1);
+}
+#customer-body {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#body-left {
+  height: 500px;
+  width: 62%;
+  overflow: hidden;
+}
+#body-left img,
+#body-right img {
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s;
+}
+#body-left img:hover,
+#body-right img:hover {
+  transform: scale(1.1);
+}
+#body-right {
+  height: 500px;
+  width: 35%;
+  overflow: hidden;
+}
+#body-right #list {
+  gap: 50px;
+}
+#partner {
+  padding-top: 30px;
+}
+#partner #title,
+#act #title {
+  text-align: center;
+  font-size: 29px;
+}
+.carousel {
+  background: #fafafa;
+  margin-top: 30px;
+}
+
+.carousel-cell {
+  width: 20%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8c8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+#box-act {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+#prevButton,
+#nextButton {
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 35px;
+}
+
+#prevButton:hover,
+#nextButton:hover {
+  background-color: #45a049;
+}
+
+.bor {
+  width: 100%;
+  border: 1px solid #689a4b;
+  margin-top: 30px;
+}
+
+#act {
+  margin-top: 30px;
+}
+#act img {
+  width: 100%;
+  height: 100%;
+}
+
+#img-l {
+  display: flex;
+}
+/* Container DIV - automatically generated */
+.simply-scroll-container {
+  position: relative;
+}
+
+/* Clip DIV - automatically generated */
+.simply-scroll-clip {
+  position: relative;
+  overflow: hidden;
+}
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.simply-scroll-list li {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+.simply-scroll-list li img {
+  border: none;
+  display: block;
+}
+
+.simply-scroll {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1em;
+}
+
+.simply-scroll .simply-scroll-clip {
+  width: 100%;
+  height: 200px;
+}
+
+.simply-scroll .simply-scroll-list li {
+  float: left;
+  width: 290px;
+  height: 200px;
+}

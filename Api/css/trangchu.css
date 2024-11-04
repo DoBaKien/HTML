@@ -1,0 +1,15 @@
+body {
+  color: white;
+}
+tbody button {
+  outline: 0;
+  border: 0;
+  padding: 5px 10px;
+  background-color: darksalmon;
+  color: white;
+}
+
+tbody button:first-child {
+  margin-right: 15px;
+  background-color: tomato;
+}

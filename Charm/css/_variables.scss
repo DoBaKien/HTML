@@ -1,0 +1,50 @@
+$maincolor: rgb(6, 33, 86);
+$secondColor: #fba81a;
+
+@for $i from 1 through 8 {
+  .box-client-#{$i} {
+    background-color: rgb(241, 241, 8);
+    height: 100vh;
+    margin-bottom: 30px;
+    text-align: center;
+    z-index: 1;
+  }
+}
+
+@mixin media-query($num: 720px) {
+  @media (max-width: $num) {
+    @content;
+  }
+}
+@mixin media-query2($num: 720px) {
+  @media (min-width: $num) {
+    @content;
+  }
+}
+
+@mixin borderTab($local) {
+  content: "";
+  width: 2px;
+  height: 180px;
+  background-color: black;
+  left: 40px;
+  position: absolute;
+  @if ($local== "top") {
+    top: -10px;
+  } @else {
+    bottom: 0;
+  }
+}
+
+@mixin menuBoth() {
+  position: absolute;
+  min-width: 80px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+@mixin lines() {
+  width: 2px;
+  height: 30px;
+  background-color: black;
+}

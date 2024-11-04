@@ -1,0 +1,33 @@
+$maincolor: rgb(6, 33, 86);
+$secondColor: #fba81a;
+
+@mixin media-query($num: 720px) {
+  @media (max-width: $num) {
+    @content;
+  }
+}
+@mixin media-query2($num: 720px) {
+  @media (min-width: $num) {
+    @content;
+  }
+}
+
+@mixin borderTab($local) {
+  content: "";
+  width: 2px;
+  height: 180px;
+  background-color: black;
+  left: 48px;
+  position: absolute;
+  @if ($local== "top") {
+    top: -10px;
+  } @else {
+    bottom: 0;
+  }
+}
+
+@mixin lines() {
+  width: 2px;
+  height: 30px;
+  background-color: black;
+}

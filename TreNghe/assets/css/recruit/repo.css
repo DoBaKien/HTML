@@ -1,0 +1,38 @@
+@media (min-width: 740px) and (max-width: 1023px) {
+  section,
+  #container {
+    padding: 20px 10px;
+  }
+  #list-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  #box-td {
+    flex-direction: column;
+    width: 400px;
+  }
+}
+@media (max-width: 740px) {
+  section,
+  #container {
+    padding: 20px 10px;
+    margin: 0;
+  }
+
+  .wrap {
+    float: none;
+    display: flex;
+    justify-content: center;
+  }
+  #box {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    width: 100%;
+  }
+  #box-td {
+    flex-direction: column;
+  }
+}

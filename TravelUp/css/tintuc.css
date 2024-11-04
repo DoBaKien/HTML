@@ -1,0 +1,174 @@
+section {
+  display: flex;
+  width: 100%;
+  background: url("../assets/img/d4bcc46e371e194b20854acd1ba3a86b.jpg") top
+    center / cover no-repeat;
+  gap: 20px;
+  padding: 200px 100px;
+}
+#container1 {
+  padding: 30px 100px;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.title1 {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.owl-carousel .owl-stage {
+  height: 600px;
+}
+.owl-item > div {
+  cursor: pointer;
+  margin: 6% 8%;
+  transition: margin 0.4s ease;
+}
+.owl-item.center > div {
+  cursor: auto;
+  margin: 0;
+}
+.owl-item:not(.center) > div:hover {
+  opacity: 0.75;
+}
+.owl-item:not(.center) .btn-carousel {
+  display: none;
+}
+.box-img1 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#box-info {
+  text-align: center;
+  padding: 10px;
+  line-height: 24px;
+}
+.date {
+  font-size: 0.8em;
+}
+.btn-carousel {
+  margin-top: 10px;
+  padding: 8px 20px;
+  background-color: white;
+  border: 3px solid #ff6a16;
+  color: #ff6a16;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+#tintuc {
+  display: flex;
+}
+#list-tt {
+  width: 100%;
+}
+.img-item {
+  width: 300px;
+  height: 170px;
+}
+.info {
+  width: 60%;
+  line-height: 24px;
+}
+.item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.subtext {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.btn-item {
+  padding: 8px 18px;
+  border: 1px solid #c0c0c0;
+  background-color: white;
+  color: #c0c0c0;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.box-right {
+  width: 400px;
+}
+.categories,
+.care {
+  border: 1px solid lightgray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.categories li {
+  list-style-type: none;
+  padding-left: 10px;
+  line-height: 40px;
+  border-bottom: 1px solid lightgray;
+}
+.categories li:last-child {
+  border-bottom: none;
+}
+.categories li a {
+  color: black;
+  text-decoration: none;
+}
+.categories li i {
+  color: rgb(249, 197, 134);
+}
+
+.head {
+  line-height: 40px;
+  padding-left: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(252, 232, 208);
+}
+.care {
+  margin-top: 30px;
+}
+.list-care {
+  padding: 20px;
+}
+.item-care {
+  position: relative;
+}
+.detail {
+  position: absolute;
+  top: 0;
+  color: white;
+  left: 10px;
+}
+.detail > p:last-child {
+  font-size: 20px;
+  color: #ff6a16;
+}
+/*
+============
+==============
+Repo
+===========
+=============
+=============
+*/
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+@media (max-width: 740px) {
+  #container1 {
+    padding: 30px;
+  }
+  .box-right {
+    display: none;
+  }
+  .item {
+    flex-direction: column;
+  }
+  .img-item {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .info {
+    width: 100%;
+  }
+}

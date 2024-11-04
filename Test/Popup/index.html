@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            height: 100vh;
+            background-color: gray;
+        }
+
+        section:not(:first-child) {
+            margin-top: 100px;
+        }
+
+        .box-bh {
+            position: fixed;
+            bottom: 10px;
+            left: 0;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .box-bh label {
+            font-size: 3rem;
+            cursor: pointer;
+            line-height: 2.5rem;
+            user-select: none;
+            position: absolute;
+            top: -35px;
+            transition: 0.5s ease;
+            left: calc(100% - 1.5rem);
+        }
+
+        .box {
+            background-color: black;
+            padding: 10px 20px;
+            transition: transform 0.5s ease;
+        }
+
+        input[type="checkbox"]:checked+label {
+            left: 0;
+        }
+
+        input[type="checkbox"]:checked+label+.box {
+            transform: translateX(-100%);
+        }
+
+        .box .box-check {
+            display: flex;
+            justify-content: center;
+            font-size: 3rem;
+            gap: 5px;
+        }
+
+        .box p {
+            text-align: center;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+
+    </section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <div class="box-bh">
+        <input type="checkbox" id="hidden-checkbox">
+        <label for="hidden-checkbox" id="btn-boxbh">×</label>
+        <div class="box" id="box">
+            <div class="box-check">
+                <span>C</span>
+                <span>h</span>
+                <span>e</span>
+                <span>c</span>
+                <span>k</span>
+            </div>
+            <p>Bảo hành</p>
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+    const btn_bh = document.getElementById("btn-boxbh");
+    const checkbox = document.getElementById("hidden-checkbox");
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null; // Trả về null nếu cookie không tồn tại
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        const cookieValue = getCookie("myCheckbox");
+        console.log(cookieValue);
+
+        if (cookieValue) {
+            checkbox.checked = true;
+            btn_bh.innerText = "➧";
+        }
+    });
+
+    checkbox.addEventListener("change", function () {
+        if (!this.checked) {
+            document.cookie =
+                "myCheckbox=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            btn_bh.innerText = "×";
+        } else {
+            document.cookie = "myCheckbox=checked; path=/; max-age=3600";
+            btn_bh.innerText = "➧";
+        }
+    });
+
+</script>
+
+</html>

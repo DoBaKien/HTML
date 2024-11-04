@@ -1,0 +1,153 @@
+#slider {
+  /* margin-top: 86px; */
+  padding-top: 40%;
+  background: url("../../img/d4bcc46e371e194b20854acd1ba3a86b.jpg") top center /
+    cover no-repeat;
+  z-index: 1;
+}
+
+#nav {
+  width: 100%;
+  background-color: #2e3d27;
+  margin: 0 auto;
+  margin-top: -120px;
+  padding: 20px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.grid-container .item1 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 40px;
+  margin-left: 30px;
+}
+.grid-container .item2 {
+  text-align: left;
+  font-size: 25px;
+}
+#btn-box {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+#btn-box div {
+  background-color: #2e3d27;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid white;
+  font-size: 20px;
+}
+#btn-box div:hover {
+  background-color: white;
+  color: #04aa6d;
+}
+#content {
+  padding: 30px 200px 0 200px;
+  background-color: #20261e;
+  color: white;
+}
+#body-pro #btn1 {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+#box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.box-f {
+  cursor: pointer;
+}
+#body-pro a {
+  font-size: 15px;
+  color: white;
+}
+.title-f {
+  margin-top: 10px;
+}
+.icon-th {
+  font-size: 9px;
+  transition: transform 0.3s;
+  color: white;
+}
+
+.box-icon {
+  height: 30px;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
+}
+.box-th {
+  width: 70px;
+}
+.bor-th {
+  border: 1px solid white;
+  transition: all 1s ease;
+}
+.item-box {
+  width: 360px;
+  height: 200px;
+  display: inline-block;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.item-box img {
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.text-item {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 6px 12px;
+  font-size: 16px;
+  background-color: #04aa6d;
+  z-index: 2;
+}
+.button {
+  background-color: #04aa6d;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.button:hover {
+  background-color: #184d3a;
+}
+.bor {
+  width: 100%;
+  border: 1px solid #689a4b;
+  margin-top: 30px;
+}

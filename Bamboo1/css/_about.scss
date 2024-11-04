@@ -1,0 +1,172 @@
+.page-about {
+  .box1 {
+    @include layoutColumn();
+    gap: 30px;
+    .col1 {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .col2 {
+      width: 100%;
+      height: inherit;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .title {
+        @include title-all(black);
+      }
+      .disc {
+        line-height: 24px;
+        margin-top: 30px;
+      }
+    }
+  }
+  .box2 {
+    @include paddingBody();
+    background-color: rgb(239, 239, 239);
+    text-align: center;
+    margin-top: 30px;
+    .title {
+      @include title-all(black);
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      //   justify-content: space-between;
+      &-item {
+        width: 21%;
+        min-width: 200px;
+        padding: 20px;
+        .title-item {
+          font-size: 22px;
+          font-weight: bold;
+          margin-top: 20px;
+        }
+        .disc-item {
+          margin-top: 10px;
+          line-height: 24px;
+        }
+        &:nth-child(-n + 3) {
+          border-right: 1px solid gray;
+        }
+        @include media-query() {
+          width: 100%;
+          &:nth-child(-n + 3) {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+  .box3 {
+    background: url("../assets/img/Maskgroup.png") top center / cover no-repeat;
+    display: flex;
+    @include media-query() {
+      flex-direction: column;
+      padding: 20px;
+    }
+    .col1 {
+      width: 100%;
+      padding: 100px;
+      height: 400px;
+      @include media-query() {
+        padding: 00px;
+      }
+    }
+    .col2 {
+      width: 100%;
+      background-color: $background-trans;
+      padding: 100px;
+      @include media-query() {
+        width: auto;
+        padding: 0 20px;
+        height: 400px;
+      }
+      .title {
+        @include title-all(white);
+      }
+      .disc {
+        line-height: 24px;
+        color: white;
+        margin-top: 30px;
+      }
+    }
+  }
+  .box4 {
+    @include layoutColumn();
+    .col1 {
+      width: 100%;
+      .title {
+        @include title-all(black);
+      }
+      .subtitle {
+        width: 80%;
+
+        @include media-query() {
+          width: 100%;
+        }
+        line-height: 24px;
+        margin-top: 20px;
+        .item {
+          background-color: $color1;
+          width: 100%;
+          display: flex;
+          gap: 20px;
+          padding: 10px 0;
+          align-items: center;
+
+          margin: 20px 0;
+          .num {
+            margin-left: 20px;
+            padding: 8px 16px;
+            background-color: $main-color;
+            border-radius: 50%;
+            color: white;
+          }
+        }
+      }
+    }
+    .col2 {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .box5 {
+    @include paddingBody();
+    text-align: center;
+    background-color: $color1;
+    .title {
+      @include title-all(black);
+      margin-bottom: 30px;
+    }
+    .carousel {
+      margin: 50px 0;
+    }
+    .carousel-cell {
+      width: 250px;
+      height: 200px;
+      margin-right: 50px;
+
+      background: #8c8;
+      border-radius: 5px;
+      counter-increment: carousel-cell;
+    }
+
+    /* cell number */
+    .carousel-cell:before {
+      display: block;
+      text-align: center;
+      content: counter(carousel-cell);
+      line-height: 200px;
+      font-size: 80px;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,346 @@
+.page-content {
+  .box1 {
+    @include layoutColumn();
+    gap: 30px;
+
+    .box1-col1 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      .title {
+        @include title-all(black);
+      }
+      .button {
+        @include btn("color");
+      }
+    }
+    .box1-col2 {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .box2 {
+    @include layoutColumn();
+    gap: 30px;
+    background: url("../assets/img/Maskgroup.png") top center / cover no-repeat;
+    .box2-col1 {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $background-trans;
+      padding: 30px;
+      height: 600px;
+
+      .title {
+        @include title-all(white);
+      }
+      .button {
+        @include btn("none");
+      }
+    }
+    .box2-col2 {
+      width: 100%;
+      @include media-query() {
+        display: none;
+      }
+    }
+  }
+  .box3 {
+    @include paddingBody;
+    text-align: center;
+    .title {
+      @include title-all;
+      margin-bottom: 30px;
+    }
+    .button {
+      @include btn("color");
+    }
+    .box3-img {
+      width: 100%;
+      margin-top: 30px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .box4 {
+    background-color: $color1;
+    @include paddingBody;
+    text-align: center;
+    .title {
+      @include title-all(black);
+    }
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        position: relative;
+        &:nth-child(-n + 5):before {
+          content: "======";
+          position: absolute;
+          top: 32px;
+          right: 0px;
+        }
+        &:nth-last-child(-n + 5)::after {
+          content: "====>";
+          position: absolute;
+          top: 32px;
+          left: 0px;
+        }
+      }
+    }
+  }
+  .box5 {
+    @include paddingBody();
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    @include media-query2() {
+      flex-direction: column-reverse;
+      height: 100%;
+    }
+    .box-item {
+      padding: 20px;
+      width: 80%;
+      background-image: linear-gradient(
+        to right,
+        rgb(81, 148, 70, 0.1),
+        rgb(79, 148, 69, 0.3)
+      );
+      height: 300px;
+      @include media-query2() {
+        height: 100%;
+        width: 100%;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .title {
+        @include title-all(black);
+      }
+      .disc {
+        width: 80%;
+        @include media-query2() {
+          width: 100%;
+        }
+      }
+      .button {
+        @include btn("color");
+      }
+    }
+    .box5-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include media-query2() {
+        position: relative;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .box6 {
+    @include layoutColumn();
+    position: relative;
+    height: 500px;
+
+    align-items: center;
+    @include media-query2() {
+      flex-direction: column;
+      height: 100%;
+    }
+    .box-clone {
+      width: 20%;
+      height: 10px;
+      @include media-query2() {
+        display: none;
+      }
+    }
+    .box-item {
+      padding: 20px;
+      width: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgb(81, 148, 70, 0.1),
+        rgb(79, 148, 69, 0.3)
+      );
+      height: 400px;
+      @include media-query2() {
+        height: 100%;
+        width: 100%;
+      }
+      display: flex;
+      .box-clone {
+        width: 100%;
+        height: 10px;
+        @include media-query2() {
+          display: none;
+        }
+      }
+      .box-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title {
+          @include title-all(black);
+        }
+        .disc {
+          width: 80%;
+          @include media-query2() {
+            width: 100%;
+          }
+        }
+        .button {
+          @include btn("color");
+        }
+      }
+    }
+    .box6-img {
+      position: absolute;
+      @include media-query2() {
+        position: relative;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .box71 {
+    background-color: $main-color;
+    @include paddingBody();
+    .box-btn {
+      display: flex;
+      justify-content: center;
+      .button {
+        @include btn("none");
+      }
+    }
+    .box7 {
+      display: flex;
+      gap: 20px;
+      @include media-query() {
+        flex-direction: column;
+      }
+      &-col1 {
+        height: 300px;
+        width: 100%;
+        background-color: red;
+      }
+      &-col2 {
+        height: 300px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        &-row1 {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          gap: 20px;
+          &-col1 {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+          }
+          &-col2 {
+            height: 100%;
+            background-color: rebeccapurple;
+            width: 100%;
+          }
+        }
+        &-row2 {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          gap: 20px;
+          &-col1 {
+            height: 100%;
+            width: 100%;
+            background-color: chartreuse;
+          }
+          &-col2 {
+            height: 100%;
+            background-color: cadetblue;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .box8 {
+    @include paddingBody();
+    display: flex;
+    gap: 20px;
+    height: 600px;
+    min-height: 100%;
+    margin-top: 30px;
+    @include media-query() {
+      flex-direction: column;
+    }
+    .text {
+      width: 600px;
+      @include media-query() {
+        width: 100%;
+      }
+      .title {
+        @include title-all(black);
+      }
+      .subtitle {
+        font-size: 22px;
+        margin-top: 20px;
+      }
+      .button {
+        @include btn("color");
+      }
+    }
+    .map {
+      width: 100%;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .box9 {
+    margin-top: 30px;
+    background-color: $color1;
+    @include paddingBody();
+    padding: 100px;
+    .carousel-cell {
+      width: 250px;
+      height: 200px;
+      margin-right: 50px;
+      background: #8c8;
+      border-radius: 5px;
+      counter-increment: carousel-cell;
+    }
+
+    /* cell number */
+    .carousel-cell:before {
+      display: block;
+      text-align: center;
+      content: counter(carousel-cell);
+      line-height: 200px;
+      font-size: 80px;
+      color: white;
+    }
+  }
+}

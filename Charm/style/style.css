@@ -1,0 +1,110 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.col-sm-9 div {
+  height: 250px;
+  font-size: 28px;
+}
+
+.col-sm-9,
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.client:not(:first-child) {
+  height: 100vh;
+  background-color: red;
+  margin-bottom: 30px;
+}
+
+#myScrollspy {
+  z-index: 2;
+}
+
+.carousel {
+  background: #222;
+}
+.carousel .carousel-cell {
+  width: 100%;
+  margin-right: 10px;
+}
+.carousel .carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+.carousel .carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  width: 100%;
+}
+
+#myScrollspy {
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 80px;
+  padding: 0;
+  z-index: 2;
+  overflow: visible;
+}
+#myScrollspy::before {
+  content: "";
+  width: 2px;
+  height: 180px;
+  background-color: black;
+  left: 48px;
+  position: absolute;
+  top: -10px;
+}
+#myScrollspy::after {
+  content: "";
+  width: 2px;
+  height: 180px;
+  background-color: black;
+  left: 48px;
+  position: absolute;
+  bottom: 0;
+}
+#myScrollspy #simple-list-example {
+  position: relative;
+  list-style-type: none;
+}
+#myScrollspy #simple-list-example li {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  overflow: visible;
+}
+#myScrollspy #simple-list-example li:hover .subtitle {
+  opacity: 1;
+  transform: translateX(0);
+}
+#myScrollspy #simple-list-example .subtitle {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 0.5s, transform 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(6, 33, 86);
+  text-align: left;
+  width: 100%;
+}
+#myScrollspy #simple-list-example .rounded {
+  text-decoration: none;
+  color: grey;
+  line-height: 50px;
+  transition: font-size 0.3s ease, margin 0.3 ease;
+  padding: 0;
+  width: 40px;
+}
+#myScrollspy #simple-list-example a.active {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(6, 33, 86);
+}/*# sourceMappingURL=style.css.map */

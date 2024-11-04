@@ -1,0 +1,207 @@
+section {
+  display: flex;
+  width: 100%;
+  background: url("../assets/img/d4bcc46e371e194b20854acd1ba3a86b.jpg") top
+    center / cover no-repeat;
+  gap: 20px;
+  padding: 200px 100px;
+}
+
+.container1 {
+  padding: 30px 100px;
+}
+.title1 {
+  font-size: 40px;
+  text-align: center;
+}
+.container1 .topic {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.space {
+  display: inline-block;
+  width: 20px; /* Độ rộng của khoảng cách */
+}
+.content {
+  display: flex;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: #fff0e7;
+  position: relative;
+  border-radius: 20px;
+  min-width: 200px;
+}
+.content .list label {
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  cursor: pointer;
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  color: gray;
+  z-index: 12;
+}
+#tab1:checked ~ .list label.tab1,
+#tab2:checked ~ .list label.tab2,
+#tab3:checked ~ .list label.tab3,
+#tab4:checked ~ .list label.tab4,
+#tab5:checked ~ .list label.tab5 {
+  color: #fff;
+}
+.content .list label:hover {
+  color: black;
+}
+.content .slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  border-radius: 12px;
+  background: #ff6a16;
+  transition: all 0.4s ease;
+}
+#tab1:checked ~ .list .slider {
+  top: 0;
+}
+#tab2:checked ~ .list .slider {
+  top: 50px;
+}
+#tab3:checked ~ .list .slider {
+  top: 100px;
+}
+#tab4:checked ~ .list .slider {
+  top: 150px;
+}
+#tab5:checked ~ .list .slider {
+  top: 200px;
+}
+.text-content {
+  width: 80%;
+  padding: 30px;
+
+  transition: max-height 0.5s ease-out;
+}
+.content .text {
+  display: none;
+}
+
+.content .text .title {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.content .text p {
+  text-align: justify;
+}
+.content .text-content .tab1 {
+  display: block;
+}
+#home:checked ~ .text-content .tab1,
+#tab2:checked ~ .text-content .tab2,
+#tab3:checked ~ .text-content .tab3,
+#tab4:checked ~ .text-content .tab4,
+#tab5:checked ~ .text-content .tab5 {
+  display: block;
+}
+#tab2:checked ~ .text-content .tab1,
+#tab3:checked ~ .text-content .tab1,
+#tab4:checked ~ .text-content .tab1,
+#tab5:checked ~ .text-content .tab1 {
+  display: none;
+}
+.content input {
+  display: none;
+}
+.item {
+  border-top: 1px solid lightgray;
+  font-size: 18px;
+}
+
+.quest {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 30px;
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
+  transition: color 0.5s ease-out, font-weight 0.5s ease-out;
+}
+
+.icon-ch {
+  font-size: 25px;
+  transition: transform 0.5s ease-out;
+}
+.answer {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+}
+.answer.show {
+  max-height: 500px;
+}
+.answer p {
+  padding: 30px 20px;
+}
+
+#form {
+  margin-top: 30px;
+  width: 300px;
+
+  padding: 20px;
+  background-color: #f3f6ea;
+}
+.img-form {
+  height: 150px;
+}
+.form-faq {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.form-faq input,
+.form-faq textarea {
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form-faq input:focus,
+.form-faq textarea:focus {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  outline: none;
+}
+#form button {
+  margin-top: 10px;
+}
+/* ========================REPO =============================== */
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+@media (max-width: 740px) {
+  .container1 {
+    padding: 20px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .list {
+    width: 100%;
+  }
+  .text-content {
+    width: 100%;
+  }
+}

@@ -1,0 +1,33 @@
+@media (min-width: 740px) and (max-width: 1023px) {
+  #container,
+  #doingu {
+    padding: 20px 10px;
+  }
+  #section {
+    margin: 0;
+  }
+  #box {
+    justify-content: center;
+    gap: 20px;
+  }
+  #section {
+    margin: 0;
+  }
+}
+@media (max-width: 740px) {
+  #container,
+  #doingu {
+    padding: 20px 10px;
+  }
+  #section {
+    margin: 0;
+  }
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #box {
+    justify-content: center;
+  }
+}

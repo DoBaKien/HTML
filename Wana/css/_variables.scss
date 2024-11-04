@@ -1,0 +1,10 @@
+@mixin media-query($num: 720px) {
+  @media (max-width: $num) {
+    @content;
+  }
+}
+@mixin media-query2($num: 720px) {
+  @media (min-width: $num) {
+    @content;
+  }
+}

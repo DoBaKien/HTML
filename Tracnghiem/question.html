@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p class="warn">Are you sure you want to quit the test?</p>
+            <p class="sub_warn">The test record will not be saved after exiting.</p>
+            <div class="box_btn">
+                <button id="closeModalBtn">Đóng</button>
+                <button id="logBtn">Đồng ý</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-quest">
+        <div class="header">
+            <div class="back-btn">
+                <i class="ri-arrow-left-s-line" id="goBackButton"></i>
+            </div>
+            <div class="record" id="record">
+
+            </div>
+        </div>
+        <div class="box-ans">
+            <div class="header-ans"></div>
+            <h2 id="questionTitle"></h2>
+            <div id="answerOptions"></div>
+        </div>
+        <button id="nextButton" disabled>Tiếp tục</button>
+    </div>
+</body>
+<script src="./data.js"></script>
+
+<script src="script1.js"></script>
+
+</html>

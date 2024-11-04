@@ -1,0 +1,106 @@
+$main-color: #ffb700;
+$back-color: #18152d;
+$light-color: #005656;
+$high-color: #f0ede2;
+@mixin media-query($num: 720px) {
+  @media (max-width: $num) {
+    @content;
+  }
+}
+@mixin media-query2($num: 720px) {
+  @media (min-width: $num) {
+    @content;
+  }
+}
+@mixin paddingBody() {
+  padding: 100px;
+  @include media-query() {
+    padding: 30px;
+  }
+}
+@mixin hamburger() {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.5s ease;
+  max-width: 100%;
+}
+
+@mixin animationText($leng, $name, $time: 0s) {
+  @for $i from 1 through $leng {
+    #{$name}-#{$i} {
+      transition-delay: calc((#{$i} * 0.1s) + $time);
+    }
+  }
+}
+@mixin btnHover($hover: true) {
+  display: flex;
+  cursor: pointer;
+  width: 200px;
+  line-height: 40px;
+
+  @if ($hover==true) {
+    @include hoverBtn();
+  }
+  a {
+    justify-self: flex-end;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    transition: color 0.3s;
+  }
+  i {
+    font-size: 30px;
+    transition: all 0.3s;
+  }
+}
+
+@mixin hoverBtn() {
+  @include media-query2() {
+    &:hover {
+      color: white;
+      a {
+        color: white;
+      }
+      i {
+        margin-left: 20px;
+        font-size: 50px;
+      }
+    }
+  }
+}
+@mixin btnStep($bor: $light-color, $back: $main-color) {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  justify-content: space-evenly;
+
+  .bg {
+    padding: 2px;
+    background-color: transparent;
+    border-radius: 50%;
+    button {
+      background-color: transparent;
+      border: none;
+      width: 60px;
+      border-radius: 50%;
+      height: 60px;
+      cursor: pointer;
+      span {
+        color: $main-color;
+        font-size: 25px;
+      }
+      @include media-query2() {
+        &:hover {
+          border: 5px solid $light-color;
+          background-color: $main-color;
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

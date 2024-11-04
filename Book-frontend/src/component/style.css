@@ -1,0 +1,32 @@
+a {
+  text-decoration: none;
+  color: gray;
+}
+.stack {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box-icon {
+  display: flex;
+  background-color: red;
+  padding: 5px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input-search {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+}
+.icon-act {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+  width: fit-content;
+}
+.sub {
+  text-wrap: nowrap;
+  font-size: 14px;
+}
